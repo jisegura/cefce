@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container class="sidenav-container">
+  <md-sidenav #sidenav mode="side" opened="true">
+    <div class="scrolling-content">
+      <h1>
+        {{title}}
+      </h1>
+      <h2>
+        {{selectedOption}}
+      </h2>
+      Lorem ipsum dolor sit amet, pede a libero aenean phasellus
+      lorem*30
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequatur eligendi voluptas eaque qui deleniti quasi, culpa officia, consequuntur et doloribus maiores eius quaerat deserunt, animi sequi ad? Earum, sint.
+    </div>
+    <md-toolbar color="primary">
+      <button md-mini-fab><md-icon color="primary">fullscreen</md-icon></button>
+      <div class="spacer"></div>
+      <button md-mini-fab (click)="openDialog()"><md-icon color="primary">power_settings_new</md-icon></button>
+    </md-toolbar>
+
+  </md-sidenav>
+  <button md-raised-button (click)="sidenav.toggle()">Raised button</button>
+  <button md-button><md-icon>pan_tool</md-icon>Flat button</button>
+  <button md-raised-button>Kiosk Mode</button>
+  <button md-mini-fab (click)="kiosk.toggle()"><md-icon>fullscreen</md-icon></button>
+</md-sidenav-container>
+
